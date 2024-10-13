@@ -1,0 +1,25 @@
+﻿@inherits LayoutComponentBase
+
+@* <FluentDesignTheme Mode="DesignThemeModes.Dark" StorageName="app_theme" /> *@
+
+<FluentToastProvider />
+<FluentDialogProvider />
+<FluentTooltipProvider />
+<FluentMessageBarProvider />
+<FluentMenuProvider />
+
+<div class="page">
+    <div class="sidebar">
+        <NavMenu />
+    </div>
+
+    <main>
+        <div class="top-row px-4">
+            <a href="https://www.fluentui-blazor.net/" target="_blank">Fluent UI Doc</a>
+        </div>
+
+        <article class="content px-4">
+            @Body
+        </article>
+    </main>
+</div>

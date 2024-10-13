@@ -1,0 +1,23 @@
+﻿@page "/counter"
+
+<FluentHeader>
+    <FluentSpacer/>
+    Fluent Counter
+    <FluentSpacer />
+</FluentHeader>
+
+<FluentSpacer Width="100" />
+
+<FluentStack Orientation="Orientation.Vertical">
+    <FluentButton @onclick="@IncrementCount">Click me</FluentButton>
+    <FluentLabel Typo="Typography.PaneHeader" Color="Color.Success">Current count: @currentCount</FluentLabel>
+</FluentStack>
+
+@code {
+    private int currentCount = 0;
+
+    void IncrementCount()
+    {
+        currentCount++;
+    }
+}

@@ -1,0 +1,18 @@
+﻿@page "/"
+@inject IToastService ToastService
+
+<FluentCard>
+    <h2>Hello World!</h2>
+    <FluentButton Appearance="@Appearance.Accent" @onclick="@ShowToast">Fluently Click Me</FluentButton>
+</FluentCard>
+
+@code {
+    void ShowToast()
+    {
+        Random rnd = new();
+
+        var intent = Enum.GetValues<ToastIntent>()[rnd.Next(10)];
+        var message = $"Toast Event on {DateTime.Now}";
+        ToastService.ShowToast(intent, message, 2000);
+    }
+}
